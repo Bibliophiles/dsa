@@ -32,3 +32,20 @@ public:
         return longestStreak;
     }
 };
+
+
+
+//Not optimal solution from me
+class Solution {
+public:
+    int longestConsecutive(vector<int>& nums) {
+        sort(nums.begin(), nums.end());
+        int counter = 1;
+        for(int i = 1; i <= nums.size(); i++){
+            if(nums[i - 1] == nums[i] - 1){
+                counter++;
+            }
+        }
+        return counter;
+    }
+};
