@@ -26,8 +26,8 @@ class Solution:
         def isPalindrome(self, s: str) -> bool:
             #loop through all the characters and check if it is an isalnum, convert to lower
             #store the output, reverse the output and compare
-            result = ""
+            newStr = ""
             for c in s:
                 if c.isalnum():
-                    result += c.lower()
-            return result == result[::-1]
+                    newStr += c.lower()
+            return newStr == newStr[::-1]
